@@ -24,9 +24,21 @@ const capitalized = string => string[0].toUpperCase() + string.slice(1).toLowerC
 
 app.locals.title = `${capitalized(projectName)}- Generated with Ironlauncher`;
 
+// const mongoose = require('mongoose');
+// mongoose.connect('mongodb://127.0.0.1:27017/Lab-Ironhack-Movies')
+//     .then(() => console.log('Successfully connected to MongoDB'))
+//     .catch(err => console.log(err))
+// db -> index.js -> change the connection to my connection... 
+
 // 👇 Start handling routes here
 const index = require('./routes/index');
 app.use('/', index);
+
+const listMovies = require('./routes/movies');
+app.use('/', listMovies);
+
+const buyticket = require('./routes/buyticket');
+app.use('/', buyticket);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require('./error-handling')(app);

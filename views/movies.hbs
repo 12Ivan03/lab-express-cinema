@@ -1,0 +1,13 @@
+{{!-- res.render('movies.hbs', {renderMovies: allMovies, title: 'allMovies', bgPage: 'allMoviesPage'}); --}}
+<div class="grit-movies">
+    {{#each renderMovies}}
+        <div class="eachMovie">
+            <img src="{{image}}" alt="Image is not supported">
+            <div class="movieTitle">
+                <p>Movie</p>
+                <p>{{title}}</p>
+            </div>
+            <button class="btn-see-more"><a href="/movies/{{_id}}">Check out this movie</a></button>
+        </div>
+    {{/each}}
+</div>

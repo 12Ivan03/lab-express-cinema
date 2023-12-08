@@ -1,8 +1,302 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* Front screen */
+
+.homePage {
+  background-image: url(../images/cinema.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
 }
 
-a {
+.bgPageText {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10vh 0 0 57vw;
+}
+
+.bgPageText h1 {
+  color: white;
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+#listOfMoviesNewPage {
+  height: 3rem;
+  width: 13rem;
+  border: none;
+  border-radius: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+#listOfMoviesNewPage a {
   color: #00B7FF;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* btn action hover  */
+
+#listOfMoviesNewPage:hover {
+  cursor: pointer;
+  box-shadow: 1px 3px 5px #000000
+}
+
+#listOfMoviesNewPage a:hover {
+  color: #0398d2;
+}
+
+#listOfMoviesNewPage:active {
+  box-shadow:none;
+}
+#listOfMoviesNewPage a:active {
+  color: #00B7FF;
+}
+
+/* movies list */
+
+.allMoviesPage {
+  background-color: #4c4b4b;
+}
+
+.grit-movies {
+  margin: 5rem;
+  display: grid;
+  grid-gap: 2rem;
+}
+
+.eachMovie {
+  display: grid;
+  grid-template-columns: 15rem auto min-content;
+  background: linear-gradient(to right, #FF0000, #3232fd);
+  height: 16.8rem; 
+  border-radius: 2rem;
+  box-shadow: 0.5rem 0.5rem 1rem black;
+}
+
+.eachMovie img {
+  height: 15rem;
+  margin: 1rem;
+  box-shadow: 0.5rem 0.3rem 0.5rem #000000;
+  border-radius: 1rem;
+}
+
+.eachMovie p {
+  color: aliceblue;
+}
+.movieTitle {
+  margin-top: 3rem;
+  text-align: start;
+}
+.movieTitle p {
+  margin: 1rem;
+  font-size: xx-large;
+  text-shadow: 0.5rem 0.3rem 0.5rem #000000;
+}
+
+.btn-see-more {
+  grid-column: 3;
+  justify-self: end; 
+  height: 2rem;
+  width: 20rem;
+  margin: 13rem 3rem 3rem 0;
+  background: rgba(64, 63, 63, 0.400);
+  border-radius: 0.5rem;
+  border: solid 0.1rem rgba(64, 63, 63, 0.400);
+  box-shadow: 0.1rem 0.1rem 0.1rem rgb(38, 38, 38);
+}
+
+.btn-see-more a {
+  color: rgba(255, 255, 255, 0.703);
+  text-decoration: none;
+}
+
+.btn-see-more:hover {
+  box-shadow: 0.3rem 0.3rem 0.5rem black;
+  border: solid 0.1rem rgba(64, 63, 63, 0.900);
+  transition: ease-in 90ms;
+}
+
+.btn-see-more:active {
+  box-shadow: 0.1rem 0.1rem 0.1rem rgb(38, 38, 38);
+}
+
+/* movie details  */
+
+.moviesDetail {
+  background: linear-gradient(to right, #FF0000, #3232fd);
+}
+
+.templateMovieDitails {
+  background-color: #4c4b4b;
+  margin: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-gap: 2rem;
+  height: 17rem;
+  border-radius: 2rem;
+  box-shadow: 0.5rem 0.5rem 1rem black;
+}
+
+.moveiImage img {
+  height: 15rem;
+  margin: 1rem 0 0 1rem;
+  border-radius: 1rem;
+}
+
+.movieDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr ;
+  margin: 1rem 1rem 0 0 ;
+}
+
+.movieTitleDirector {
+  margin-top: 3rem;
+}
+
+.movieTitleDirector p {
+  margin-bottom: 1rem;
+  color: aliceblue;
+}
+
+.movieTitleDirector h1 {
+  margin-bottom: 2rem;
+  text-indent: 2rem;
+  color: antiquewhite;
+}
+
+.movieTitleDirector h2 {
+  text-indent: 2rem;
+  color: antiquewhite;
+}
+
+.movieStars {
+  margin-top: 3rem;
+  color: white
+}
+
+.movieStars p{
+  margin-bottom: 1rem;
+}
+
+.movieStars ul {
+  text-indent: 2rem;
+  color: antiquewhite;
+}
+
+.movieStars ul li{
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+.movieDescShowTime{
+  display: grid;
+  grid-template-rows: 0.5fr 1.5fr 0.5fr 1fr;
+  margin-top: 1rem;
+}
+
+.movieDesTitle, .schoeTimeTitle {
+  color: white;
+}
+
+.movieDescription {
+  margin-left: 2rem;
+  text-indent: 2rem;
+  color: antiquewhite;
+}
+
+.showTimes {
+  display: flex;
+}
+
+.each-line {
+  text-indent: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-right:3rem;
+  overflow: scroll;
+}
+
+.each-line a {
+  margin-top: 0.5rem;
+  text-decoration: none;
+}
+
+.each-line a:hover {
+  color: #ffffff;
+  transition: ease-in 90ms;
+}
+
+.btn-top {
+  position: absolute;
+  background-color: #4c4b4b;
+  margin: -3.5rem 0 0 7rem;
+  height: 2rem;
+  width: 5rem;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0.1rem 0.1rem 0.5rem black;
+}
+
+.btn-top a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+.btn-top:hover {
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
+  cursor: pointer;
+  transition: ease-in 90ms;
+}
+
+.btn-top:active {
+  box-shadow: 0.1rem 0.1rem 0.5rem black;
+  border: 0.1rem solid rgba(0, 0, 0, 0.544);
+  cursor: pointer;
+}
+
+/* Buy Ticket For Fun */
+
+.buyticket {
+
+  background: linear-gradient(to right, #FF0000, #3232fd);
+}
+
+.btnsButTicket {
+  background-image: url(../images/cinemaTickets.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.btnsButTicket button {
+  margin:0 2rem 5rem 0;
+  background-color: #4c4b4b;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0.1rem 0.1rem 0.5rem black;
+  height: 2rem;
+  width: 10rem;
+  color: antiquewhite;
+}
+
+.btnsButTicket button a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+.btnsButTicket  button:hover {
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
+  cursor: pointer;
+  transition: ease-in 90ms;
+}
+
+.btnsButTicket  button:active {
+  box-shadow: 0.1rem 0.1rem 0.5rem black;
+  border: 0.1rem solid rgba(0, 0, 0, 0.544);
+  cursor: pointer;
 }

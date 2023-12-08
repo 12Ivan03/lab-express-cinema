@@ -1,0 +1,35 @@
+<button class="btn-top"><a href="/movies">Back</a></button>
+
+<div class="templateMovieDitails">
+    <div class="moveiImage">
+        <img src="{{movie.image}}" alt="">
+    </div>
+    <div class="movieDetails">
+        <div class="movieTitleDirector">
+            <p>Movie title</p>
+            <h1>{{movie.title}}</h1>
+            <p>Movie Director </p>
+            <h2>{{movie.director}}</h2>
+        </div>
+        <div class="movieStars">
+            {{#if movie.stars.length}}
+                <p>Stars</p>
+                <ul>
+                    {{#each movie.stars}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            {{/if}}
+        </div>
+        <div class="movieDescShowTime">
+            <p class="movieDesTitle">Movie description:</p>
+            <p class="movieDescription">{{movie.description}}</p>
+            <p class="schoeTimeTitle">Show Times</p>
+            <ul class="showTimes">
+                {{#each movie.showtimes}}
+                    <li class="each-line">{{this}} <a href="/buyticket">ticket</a></li>           
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
